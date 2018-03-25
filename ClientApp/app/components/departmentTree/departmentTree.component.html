@@ -1,0 +1,17 @@
+
+<div>
+    <button (click)="getChildDepartments()">+</button>
+    <label>{{ department.id }}) {{ department.name }}</label>
+</div>
+
+<div *ngIf="isShow" class="child-container">
+    <div>
+        <input placeholder="Child name" [(ngModel)]="name" />
+        <button (click)="create()">Add</button>
+    </div>
+
+    <departmentTree *ngFor="let item of department.childs" 
+                [department]="item"></departmentTree>
+</div>
+
+

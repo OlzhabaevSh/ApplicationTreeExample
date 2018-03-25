@@ -1,0 +1,9 @@
+<h1>Departments</h1>
+
+<div>
+    <input [(ngModel)]="name" />
+    <button (click)="create()">Create</button>
+</div>
+
+<departmentTree *ngFor="let item of departments" 
+                [department]="item"></departmentTree>
